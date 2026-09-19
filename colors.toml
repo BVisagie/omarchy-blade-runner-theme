@@ -1,0 +1,62 @@
+# Blade Runner (1982)
+# Los Angeles, November 2019. Sodium light through acid rain: the night is
+# smog-blue, the light is warm and comes through something. Cyan is the one
+# cold neon. Neon through smoke, not a synthwave nightclub.
+
+mode = "dark"
+
+accent = "#E08A3A"
+cursor = "#F0E6D2"
+selection = "#1D3440"
+muted = "#7C8791"
+
+background = "#0A0E13"
+dark_background = "#070A0E"
+darker_background = "#040609"
+lighter_background = "#151C24"
+
+foreground = "#C3BBA9"
+dark_foreground = "#7C8791"
+light_foreground = "#D8D1C1"
+bright_foreground = "#F0E6D2"
+
+selection_foreground = "#F0E6D2"
+selection_background = "#1D3440"
+
+hyprland_active_border = "rgba(E08A3Abb) rgba(5EC0CC55) 45deg"
+hyprland_inactive_border = "rgba(1D344088)"
+
+# Muted text and errors remain readable on the lifted panel background.
+# Every hue is pulled a little toward the haze; magenta stays rare.
+red = "#E05A45"
+yellow = "#D8AE5A"
+orange = "#E08A3A"
+green = "#8DAF7E"
+cyan = "#5EC0CC"
+blue = "#6E9CC8"
+magenta = "#C07A9E"
+brown = "#5A3A24"
+
+bright_red = "#F07A62"
+bright_yellow = "#EAC77A"
+bright_green = "#A8C79A"
+bright_cyan = "#86D6DF"
+bright_blue = "#93B6DA"
+bright_magenta = "#D69AB8"
+
+color0 = "#0A0E13"
+color1 = "#E05A45"
+color2 = "#8DAF7E"
+color3 = "#D8AE5A"
+color4 = "#6E9CC8"
+color5 = "#C07A9E"
+color6 = "#5EC0CC"
+color7 = "#C3BBA9"
+color8 = "#7C8791"
+color9 = "#F07A62"
+color10 = "#A8C79A"
+color11 = "#EAC77A"
+color12 = "#93B6DA"
+color13 = "#D69AB8"
+color14 = "#86D6DF"
+color15 = "#F0E6D2"
