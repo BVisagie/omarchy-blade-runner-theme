@@ -1,6 +1,6 @@
 // Optional Ghostty effect: a static warm halation, like light through smoke.
-// No flicker, warping or cursor trails. The source pixel is never recolored;
-// only a faint halo is added around bright glyphs.
+// No flicker, warping or cursor trails. Only a faint, thresholded halo is
+// added around bright glyphs, so text and error colours read true.
 void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec2 uv = fragCoord / iResolution.xy;
     vec2 px = 1.0 / iResolution.xy;
