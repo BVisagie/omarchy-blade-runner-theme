@@ -7,12 +7,21 @@ mode = "dark"
 
 accent = "#E08A3A"
 cursor = "#F0E6D2"
-selection = "#1D3440"
 muted = "#7C8791"
+
+# Selection is the blinds' blue, at two depths. `selection` fills menus,
+# launcher and btop under sodium text: accent on it is 4.52:1, so do not lift
+# it further. `selection_background` is the editor and terminal selection,
+# lifted so visual-line stays findable: cream on it is 9.31:1.
+selection = "#213946"
+selection_foreground = "#F0E6D2"
+selection_background = "#243C4A"
 
 background = "#0A0E13"
 dark_background = "#070A0E"
 darker_background = "#040609"
+# The lifted panel (tooltips, menus, launcher). Floors on it: muted 4.68:1 and
+# red 4.67:1. Brightening this panel fails WCAG AA for both.
 lighter_background = "#151C24"
 
 foreground = "#C3BBA9"
@@ -20,43 +29,41 @@ dark_foreground = "#7C8791"
 light_foreground = "#D8D1C1"
 bright_foreground = "#F0E6D2"
 
-selection_foreground = "#F0E6D2"
-selection_background = "#1D3440"
-
 hyprland_active_border = "rgba(E08A3Abb) rgba(5EC0CC55) 45deg"
-hyprland_inactive_border = "rgba(1D344088)"
+hyprland_inactive_border = "rgba(21394688)"
 
-# Muted text and errors remain readable on the lifted panel background.
-# Every hue is pulled a little toward the haze; magenta stays rare.
+# Every text hue clears 4.5:1 on both backgrounds and is pulled toward the
+# haze. Keywords stay in-world: the magenta slot carries title-card brick, and
+# blue is a steel blue kept well apart from the cyan neon.
 red = "#E05A45"
 yellow = "#D8AE5A"
 orange = "#E08A3A"
 green = "#8DAF7E"
 cyan = "#5EC0CC"
-blue = "#6E9CC8"
-magenta = "#C07A9E"
+blue = "#6788AC"
+magenta = "#C8745C"
 brown = "#5A3A24"
 
 bright_red = "#F07A62"
 bright_yellow = "#EAC77A"
 bright_green = "#A8C79A"
 bright_cyan = "#86D6DF"
-bright_blue = "#93B6DA"
-bright_magenta = "#D69AB8"
+bright_blue = "#89A5C2"
+bright_magenta = "#DC9078"
 
 color0 = "#0A0E13"
 color1 = "#E05A45"
 color2 = "#8DAF7E"
 color3 = "#D8AE5A"
-color4 = "#6E9CC8"
-color5 = "#C07A9E"
+color4 = "#6788AC"
+color5 = "#C8745C"
 color6 = "#5EC0CC"
 color7 = "#C3BBA9"
 color8 = "#7C8791"
 color9 = "#F07A62"
 color10 = "#A8C79A"
 color11 = "#EAC77A"
-color12 = "#93B6DA"
-color13 = "#D69AB8"
+color12 = "#89A5C2"
+color13 = "#DC9078"
 color14 = "#86D6DF"
 color15 = "#F0E6D2"

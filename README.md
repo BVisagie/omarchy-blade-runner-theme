@@ -34,18 +34,24 @@ Omarchy 3's Waybar/Mako setup is not covered by these overrides.
 | Accent | `#E08A3A` | Flare stacks over the city, the Voight-Kampff readout, the pyramid at sunset |
 | Foreground | `#C3BBA9` | Lamplight on paper, warm through the haze |
 | Muted | `#7C8791` | The smoke inside a light shaft |
-| Selection | `#1D3440` | Blue bars of shadow from the blinds |
+| Selection | `#243C4A` | Blue bars of shadow from the blinds |
 | Red | `#E05A45` | The opening title card |
 | Yellow | `#D8AE5A` | Candlelight in the pyramid office |
 | Cyan | `#5EC0CC` | Neon umbrella handles in the street crowd, the one cold neon |
 
-Blue (`#6E9CC8`), green (`#8DAF7E`) and a little magenta (`#C07A9E`) round out
-the syntax colours, each pulled toward the haze. Neon through smoke, not a
-synthwave nightclub: no purple grids, no pink sunsets.
+Keywords stay in-world: the magenta slot carries title-card brick (`#C8745C`),
+so editors paint keywords brick, never pink. Blue is a steel blue (`#6788AC`),
+kept well apart from the cyan neon, and green (`#8DAF7E`) rounds out the syntax
+colours, each pulled toward the haze. Neon through smoke, not a synthwave
+nightclub: no purple grids, no pink sunsets.
 
 Every text colour, muted text and errors included, exceeds 4.5:1 contrast
 against both the main background and the lifted panel background (`#151C24`).
-Selected text on the blinds-blue selection is above 10:1.
+Selection is the blinds' blue at two depths. Editors and terminals use
+`#243C4A`, lifted so a visual-line selection is easy to find (cream text 9.31:1).
+Menus, the launcher and btop fill the current row with a deeper `#213946` so
+sodium text on it holds 4.52:1. `colors.toml` notes these floors next to the
+keys they constrain.
 
 ## Esper terminal
 
@@ -74,7 +80,9 @@ the launched process and its children. No shell startup files, default terminal,
 or keybindings are edited.
 
 `--haze` enables a small static halation in Ghostty: bright glyphs bleed a
-little amber-tinted light, like highlights through smoke. It adds no animation
+little amber-tinted light, like highlights through smoke. The halo radius follows
+the display (about 6 px at 1440p, 7 px at 2160p), so it reads as haze, not as
+sharpening. It adds no animation
 loop, flicker, warping, or cursor trails, and the glow stays faint enough that
 text and error colours read true. Foot uses the clean profile. Close the preview
 window and open your normal terminal to return to your existing setup.
@@ -95,14 +103,16 @@ and [Starship prompt configuration](https://starship.rs/config/).
 ## Shell
 
 The `shell.*.toml` files style the bar, controls, launcher, menus, notifications,
-popups, tooltips, lock input, polkit prompt, and image picker. Panels are opaque
-smog-black; selected rows get a blinds-blue fill with bright text; keyboard focus
-gets a distinct 2px sodium border. User font scaling remains inherited. Omarchy
-shares the bar's red active token among recording, updates, and other attention
-states.
+popups, tooltips, lock input, polkit prompt, and image picker. Sodium is kept for
+focus and the current item, not for every card edge. Menus and the launcher sit
+on the lifted panel with a muted edge, like tooltips; the selected row gets the
+blinds-blue fill with sodium text. Keyboard focus gets a distinct 2px sodium
+border. User font scaling remains inherited, and the bar keeps Omarchy's stock
+size. Omarchy shares the bar's red active token among recording, updates, and
+other attention states.
 
 The active window border runs from sodium amber to a faint cyan: warm light
-meeting cold.
+meeting cold. Notifications and popups carry the same gradient.
 
 Omarchy replaces entire sections when applying these files, so overridden
 sections include their supported defaults explicitly. Global user shell overrides
@@ -133,9 +143,11 @@ generations, not native 4K renders.
 ## Lock screen
 
 This theme styles the lock input with readable placeholder text: a muted border
-at rest, sodium amber while typing, and red on a wrong password. Polkit prompts
-use the same amber border and red error state. The theme does not replace the
-lock design or authentication.
+at rest, sodium amber while typing, and red on a wrong password. Selected text
+in the field is tinted sodium, not boxed in a solid block. Polkit prompts match:
+muted at rest and red on error. Polkit has no typing state for its border, so
+sodium shows through its lock glyph and text selection instead. The theme does
+not replace the lock design or authentication.
 
 ## What it themes
 
@@ -147,7 +159,7 @@ Omarchy generates the rest from `colors.toml` when the theme is applied:
 - btop, Chromium
 - Hyprland active border
 - Keyboard RGB (`E08A3A`)
-- Icons: `Yaru-dark`
+- Icons: `Yaru-yellow-dark`
 
 ## Validation
 

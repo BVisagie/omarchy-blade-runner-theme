@@ -1,7 +1,8 @@
+# Cards borrow the window border: sodium into cyan.
 background       = "#0A0E13"
 background-alpha = 1.0
 text             = "#C3BBA9"
-border           = "#E08A3A"
+border           = "hyprland.active-border"
 border-alpha     = 1.0
 border-width     = 1
 countdown        = "#E08A3A"

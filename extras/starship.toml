@@ -1,6 +1,6 @@
 # ANSI colors follow the terminal palette, including after a theme change.
 add_newline = true
-command_timeout = 250
+command_timeout = 500
 format = '$username$hostname$directory$git_branch$git_status$cmd_duration$line_break$status$character'
 
 [username]

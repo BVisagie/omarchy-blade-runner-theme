@@ -1,12 +1,13 @@
-background                = "#0A0E13"
+# The tooltip model: lifted panel, muted edge. Sodium marks the current row.
+background                = "#151C24"
 background-alpha          = 1.0
 text                      = "#C3BBA9"
-border                    = "#E08A3A"
+border                    = "#7C8791"
 border-alpha              = 1.0
 scrim                     = "#040609"
 scrim-alpha               = 0.65
-selected-background       = "#1D3440"
+selected-background       = "#213946"
 selected-background-alpha = 1.0
-selected-text             = "#F0E6D2"
+selected-text             = "#E08A3A"
 selected-border           = "#E08A3A"
 selected-border-alpha     = 1.0

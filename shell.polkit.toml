@@ -1,9 +1,10 @@
-# Authentication prompts share the lock screen's states: amber, then red.
+# Matches the lock: muted at rest, red on error. Polkit has no typing border;
+# sodium shows through the lock glyph and the text selection (accent).
 background       = "#0A0E13"
 background-alpha = 1.0
 text             = "#C3BBA9"
 text-error       = "#E05A45"
-border           = "#E08A3A"
+border           = "#7C8791"
 border-error     = "#E05A45"
 border-alpha     = 1.0
 scrim            = "#040609"

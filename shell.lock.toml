@@ -1,3 +1,4 @@
+# Muted at rest, sodium while typing, red on a wrong password.
 background       = "#0A0E13"
 background-alpha = 1.0
 text             = "#D8D1C1"
@@ -7,5 +8,5 @@ border           = "#7C8791"
 border-active    = "#E08A3A"
 border-error     = "#E05A45"
 border-alpha     = 1.0
-selection        = "#1D3440"
-selection-alpha  = 1.0
+selection        = "#E08A3A"
+selection-alpha  = 0.45

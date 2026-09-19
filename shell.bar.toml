@@ -4,5 +4,5 @@ text             = "#C3BBA9"
 # Omarchy shares this token between recording, updates, and other alerts.
 active           = "#E05A45"
 scale-with-font  = true
-size-horizontal  = 28
-size-vertical    = 30
+size-horizontal  = 26
+size-vertical    = 28

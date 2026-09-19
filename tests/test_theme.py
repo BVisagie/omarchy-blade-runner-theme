@@ -1,6 +1,7 @@
 """Regression checks for wallpapers, readability, shell sections, and launcher argv."""
 import json
 import os
+import re
 from pathlib import Path
 import shutil
 import subprocess
@@ -13,6 +14,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 
+HEX = re.compile(r"^#[0-9A-F]{6}$")
 # Every section in Omarchy 4's generated shell.toml.
 SHELL_SECTIONS = {"bar", "hyprland", "controls", "spacing", "font", "popups", "tooltip",
                   "notifications", "launcher", "menu", "polkit", "lock", "image-picker"}
@@ -74,6 +76,20 @@ class ThemeTests(unittest.TestCase):
                     self.assertIn(value, colors.values(), (path.name, key))
         lock = tomllib.loads((ROOT / "shell.lock.toml").read_text())
         self.assertGreaterEqual(contrast(lock["placeholder"], lock["background"]), 4.5)
+
+    def test_hex_values_are_uppercase_six_digit(self):
+        files = [ROOT / "colors.toml", *ROOT.glob("shell.*.toml")]
+        for path in files:
+            for key, value in tomllib.loads(path.read_text()).items():
+                if isinstance(value, str) and value.startswith("#"):
+                    self.assertRegex(value, HEX, (path.name, key))
+
+    def test_selected_rows_stay_readable(self):
+        for path in ROOT.glob("shell.*.toml"):
+            values = tomllib.loads(path.read_text())
+            if "selected-text" in values and "selected-background" in values:
+                with self.subTest(section=path.name):
+                    self.assertGreaterEqual(contrast(values["selected-text"], values["selected-background"]), 4.5)
 
     def test_launcher_preserves_command_arguments_and_scopes_prompt(self):
         with tempfile.TemporaryDirectory(prefix="blade runner test ") as directory:
