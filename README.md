@@ -34,14 +34,14 @@ Omarchy 3's Waybar/Mako setup is not covered by these overrides.
 | Accent | `#E08A3A` | Flare stacks over the city, the Voight-Kampff readout, the pyramid at sunset |
 | Foreground | `#C3BBA9` | Lamplight on paper, warm through the haze |
 | Muted | `#7C8791` | The smoke inside a light shaft |
-| Selection | `#243C4A` | Blue bars of shadow from the blinds |
+| Selection | `#213946` | Blue bars of shadow from the blinds |
 | Red | `#E05A45` | The opening title card |
 | Yellow | `#D8AE5A` | Candlelight in the pyramid office |
 | Cyan | `#5EC0CC` | Neon umbrella handles in the street crowd, the one cold neon |
 
 Keywords stay in-world: the magenta slot carries title-card brick (`#C8745C`),
-so editors paint keywords brick, never pink. Blue is a steel blue (`#6788AC`),
-kept well apart from the cyan neon, and green (`#8DAF7E`) rounds out the syntax
+so editors paint keywords brick, never pink. Blue is a steel blue (`#7093C8`),
+kept apart from both the cyan neon and muted comments, and green (`#8DAF7E`) rounds out the syntax
 colours, each pulled toward the haze. Neon through smoke, not a synthwave
 nightclub: no purple grids, no pink sunsets.
 

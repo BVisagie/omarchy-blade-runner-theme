@@ -31,6 +31,18 @@ def contrast(a, b):
     return (hi + 0.05) / (lo + 0.05)
 
 
+def delta_e(a, b):
+    """CIE76 colour difference in CIELAB (D65)."""
+    def lab(color):
+        rgb = [int(color[i:i + 2], 16) / 255 for i in (1, 3, 5)]
+        r, g, b_ = [v / 12.92 if v <= 0.04045 else ((v + 0.055) / 1.055) ** 2.4 for v in rgb]
+        xyz = ((r * .4124 + g * .3576 + b_ * .1805) / .95047, r * .2126 + g * .7152 + b_ * .0722,
+               (r * .0193 + g * .1192 + b_ * .9505) / 1.08883)
+        fx, fy, fz = [t ** (1 / 3) if t > 0.008856 else 7.787 * t + 16 / 116 for t in xyz]
+        return 116 * fy - 16, 500 * (fx - fy), 200 * (fy - fz)
+    return sum((p - q) ** 2 for p, q in zip(lab(a), lab(b))) ** 0.5
+
+
 class ThemeTests(unittest.TestCase):
     def test_shipped_wallpapers_are_valid_4k_images(self):
         wallpapers = list((ROOT / "backgrounds").glob("*.jpg"))
@@ -64,6 +76,13 @@ class ThemeTests(unittest.TestCase):
                  "bright_cyan", "bright_foreground"]
         for i, role in enumerate(roles):
             self.assertEqual(colors[f"color{i}"], colors[role])
+
+    def test_syntax_colors_stay_off_muted_comments(self):
+        colors = tomllib.loads((ROOT / "colors.toml").read_text())
+        for hue in ("red", "yellow", "green", "cyan", "blue", "magenta"):
+            for key in (hue, f"bright_{hue}"):
+                with self.subTest(color=key):
+                    self.assertGreaterEqual(delta_e(colors[key], colors["muted"]), 20)
 
     def test_shell_sections_are_valid_and_colors_stay_in_palette(self):
         colors = tomllib.loads((ROOT / "colors.toml").read_text())

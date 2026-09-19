@@ -34,13 +34,14 @@ hyprland_inactive_border = "rgba(21394688)"
 
 # Every text hue clears 4.5:1 on both backgrounds and is pulled toward the
 # haze. Keywords stay in-world: the magenta slot carries title-card brick, and
-# blue is a steel blue kept well apart from the cyan neon.
+# blue is a steel blue kept apart from both the cyan neon and muted comments
+# (at least 20 ΔE from muted, so functions never read as comments).
 red = "#E05A45"
 yellow = "#D8AE5A"
 orange = "#E08A3A"
 green = "#8DAF7E"
 cyan = "#5EC0CC"
-blue = "#6788AC"
+blue = "#7093C8"
 magenta = "#C8745C"
 brown = "#5A3A24"
 
@@ -48,14 +49,14 @@ bright_red = "#F07A62"
 bright_yellow = "#EAC77A"
 bright_green = "#A8C79A"
 bright_cyan = "#86D6DF"
-bright_blue = "#89A5C2"
+bright_blue = "#98B4DC"
 bright_magenta = "#DC9078"
 
 color0 = "#0A0E13"
 color1 = "#E05A45"
 color2 = "#8DAF7E"
 color3 = "#D8AE5A"
-color4 = "#6788AC"
+color4 = "#7093C8"
 color5 = "#C8745C"
 color6 = "#5EC0CC"
 color7 = "#C3BBA9"
@@ -63,7 +64,7 @@ color8 = "#7C8791"
 color9 = "#F07A62"
 color10 = "#A8C79A"
 color11 = "#EAC77A"
-color12 = "#89A5C2"
+color12 = "#98B4DC"
 color13 = "#DC9078"
 color14 = "#86D6DF"
 color15 = "#F0E6D2"
