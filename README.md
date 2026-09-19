@@ -124,14 +124,15 @@ All five are **3840×2160**.
 
 1. **Dusk**: the top floor of a stepped megastructure at sunset, looking out through smog at pyramids and towers (first in the theme's cycle)
 2. **Flight**: gliding down a rain-filled canyon of megastructures, air traffic, searchlights, and flare stacks where the canyon opens
-3. **Blinds**: an apartment at night, a passing searchlight sliced by venetian blinds across textile-block walls
-4. **Noodle bar**: an empty street counter under a dripping overhang, steam and abstract neon on wet asphalt
+3. **Blinds**: a sparse apartment at night, lamp against a passing searchlight sliced by venetian blinds across textile-block walls
+4. **Noodle bar**: an empty street counter under a dripping overhang, crates and drums for seats, steam and one cyan tube on wet asphalt
 5. **Atrium**: an iron-and-glass atrium in decay, searchlight shafts through the skylight onto a wet tiled floor
 
 Each still is an original generation from a written prompt that rules out
 people, faces, logos, readable text, and recreations of film frames. They were
 generated at 1672×941. Blinds and Noodle bar were retouched where the generator
-added portraits to picture frames and glyph-like marks to a placard.
+added a figure in a distant doorway and stencil-like marks on crates, a drum,
+and a wall box.
 
 Each was then fitted to 4K with Lanczos and restored with the one-step
 [VOSR 2.0](https://github.com/cswry/VOSR) super-resolution model, using a wavelet
