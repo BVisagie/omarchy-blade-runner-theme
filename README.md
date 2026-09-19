@@ -7,6 +7,12 @@ warm light that always comes *through* something (haze, blinds, rain, glass),
 and one cold neon. The accent is sodium amber (`#E08A3A`); cyan is kept for the
 things that should read cold.
 
+![Live desktop — Dusk wallpaper with Neovim, fastfetch, and btop](preview.png)
+
+Live Omarchy 4 desktop, captured at 3840×2160 and 150% display scaling. Dusk, the
+default wallpaper, fills the megastructure's top floor; Neovim, fastfetch, and
+btop take their colours from the theme.
+
 ## Install
 
 Omarchy 4:
